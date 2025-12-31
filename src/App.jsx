@@ -1,3 +1,4 @@
+import Card from "./components/card";
 
 function App() {
   return (
@@ -8,15 +9,12 @@ function App() {
         <p className="subtitle">week1 + week2 pracrice project</p>
         </div>
       </header>
-        <section className="card">
-          <div className="cardHeader">
-            <h2 className="sectionTitle">Add Expense</h2>
-          </div>
-        <div className="cardBody">
-          <p>Form will be here....</p>
-        </div>
-
-        </section>
+       <Card title={'Add Expense'}>
+        <p>Form will be here...</p>
+       </Card>
+        <Card title={'Expense'}>
+        <p>Form will be here...</p>
+       </Card>
       
       
     </div>
