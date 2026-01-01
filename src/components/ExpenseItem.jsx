@@ -1,4 +1,4 @@
-export default function Expenses({expenses}){
+export default function ExpenseItem({expenses}){
     return(
         <li className="item">
             <div>
