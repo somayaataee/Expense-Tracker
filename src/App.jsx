@@ -1,5 +1,14 @@
 import Card from "./components/card";
 
+function CreateId(){
+  if(typeof crypto !== 'undefined' && crypto.randomUUID){
+    console.log(crypto.randomUUID());
+    return crypto.randomUUID();
+
+  }
+  return `${Date.now()}-${Math.random().toString(16).slice(2)}`
+}
+
 function App() {
   return (
     <div className="page">
