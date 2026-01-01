@@ -1,8 +1,8 @@
+import { useState } from "react";
 import Card from "./components/card";
 
 function CreateId(){
   if(typeof crypto !== 'undefined' && crypto.randomUUID){
-    console.log(crypto.randomUUID());
     return crypto.randomUUID();
 
   }
@@ -10,6 +10,11 @@ function CreateId(){
 }
 
 function App() {
+  const [expenses,setExpenses]=useState([
+    {id:CreateId, amount:20, category:'shopping'},
+    {id:CreateId, amount:15, category:'Food'},
+  ])
+
   return (
     <div className="page">
       <header className="header">
@@ -22,7 +27,7 @@ function App() {
         <p>Form will be here...</p>
        </Card>
         <Card title={'Expense'}>
-        <p>Form will be here...</p>
+        <p>count:{expenses.length}</p>
        </Card>
       
       
