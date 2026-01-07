@@ -8,7 +8,7 @@ export default function ExpenseList({ expenses,onDeleteExpense }) {
   return (
     <ul className="list">
       {expenses.map((expense) => (
-        <ExpenseItem key={expense.id} expense={expense}  onDelete={onDeleteExpense}></ExpenseItem>
+        <ExpenseItem key={expense.id} expense={expense}  onDelete={onDeleteExpense}/>
       ))}
     </ul>
   );
